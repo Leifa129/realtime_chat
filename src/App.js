@@ -2,7 +2,7 @@ import React, {Component} from 'react';
 import './App.css';
 import Auth from './Auth';
 import firebase from 'firebase';
-import Quotes from './Quotes';
+import MessageBox from "./MessageBox";
 
 
 let config = {
@@ -18,9 +18,10 @@ firebase.initializeApp(config);
 
 class App extends Component
 {
-    state = {loggedIn: false};
+    state = {loggedIn: false, user: null, messages: []};
     authentication = firebase.auth();
-    // db = firebase.firestore();
+    db = firebase.firestore();
+
     authFlag = true;
 
 componentDidMount() {
@@ -35,16 +36,22 @@ componentDidMount() {
                 this.setState(prevState => {
                     return {
                         ...prevState,
-                        loggedIn: !prevState.loggedIn
+                        user: user,
+                        loggedIn: true
                     };
                 });
             if(user == null) {
-                console.log('user signed out');
+                console.log('Not signed in');
                 this.setState({loggedIn: false});
             }
         }
 
     )
+
+    this.db.collection('messages').orderBy('date', 'desc')
+        .onSnapshot(snapshot => {
+            this.setState({messages: snapshot.docs});
+        })
 };
 
 
@@ -54,31 +61,41 @@ componentDidMount() {
             <div className="App">
 
                 {
-                    // wacky logic.. could for sure have done something cleaner.
+                    // wacky logic.. TODO: clean this up.
                     !this.authFlag ? (
                     (!this.state.loggedIn) ?
                     <Auth onAuth={(username, password) => {
                     this.authentication.signInWithEmailAndPassword(username, password).then(
                         response => {
                             //this.setState({user: response.user});
-                            //console.log(response);
+                            console.log(response.user.displayName);
                         }
                     );
 
-                }} onCreateUser={(username, password) => {
+                }} onCreateUser={(username, password, name) => {
                     this.authentication.createUserWithEmailAndPassword(username, password).then(
                         response => {
-                            // this.setState({user: response.user});
-                            //console.log(response);
+                            return response.user.updateProfile({displayName: name})
                         }
                     )
                 }}></Auth>
                     :
                     <div>
-                        { <button onClick={() => {this.authentication.signOut().then()}}>Logout</button>
-                        }
-                        <Quotes />
-                    </div> ) : <div></div>
+
+                        <div>Welcome {this.state.user.displayName}</div>
+                            <button onClick={() => {this.authentication.signOut().then()}}>Logout</button>
+
+                        <div>
+                            <MessageBox
+                                messages={this.state.messages} user={this.state.user.email} db={this.db}
+                                postMessage={(content) => {this.db.collection('messages').add({author: this.state.user.displayName, content: content, user:this.state.user.email, date: new Date()}).then(
+                                    response => {console.log(response)}
+                                )}} />
+
+                        </div>
+                    </div> ) : <div>
+
+                    </div>
                 }
             </div>
         );

@@ -1,0 +1,15 @@
+.textArea {
+    position: absolute;
+    bottom: 0;
+    border-radius: 25px;
+    height: 30px;
+    left: 20%;
+    margin: 5px auto;
+    display: block;
+    line-height: 20px;
+    resize: inherit;
+}
+
+.textArea:focus {
+    outline: none;
+}

@@ -27,7 +27,7 @@ class Auth extends Component {
 
     createUser = event => {
         event.preventDefault();
-        this.props.onCreateUser(this.state.newEmail, this.state.newPassword);
+        this.props.onCreateUser(this.state.newEmail, this.state.newPassword, this.state.name);
     };
 
     updateField = event => {
@@ -62,7 +62,7 @@ class Auth extends Component {
                     <div className="overlay">
                         <div className="overlay-panel overlay-left">
                             <h1>Welcome!</h1>
-                            <p>Sign in to view super secret information</p>
+                            <p>Sign in to join the group chat</p>
                             <button className="ghost" onClick={this.signInHandler} id="signIn">Sign In</button>
                         </div>
                         <div className="overlay-panel overlay-right">

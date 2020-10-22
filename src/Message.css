@@ -1,0 +1,21 @@
+.messageBody{
+    margin: 5px 20px;
+    border-radius: 25px;
+    padding: 10px;
+    display: inline-block;
+    max-width: 60%;
+    clear: both;
+    width: fit-content;
+    color: white;
+    text-align: left;
+
+}
+
+.receiving {
+    background-color: #3f464d;
+}
+
+.sending {
+    align-self: flex-end;
+    background-color: cornflowerblue;
+}

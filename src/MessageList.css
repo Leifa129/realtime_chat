@@ -1,0 +1,7 @@
+.messages {
+    max-height: 440px;
+    height: 440px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column-reverse;
+}
