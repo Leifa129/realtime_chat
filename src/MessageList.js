@@ -4,8 +4,14 @@ import Message from "./Message";
 
 function MessageList(props) {
     const messages = props.messages ?
-        props.messages.map(message => <Message key={message.id} receiving={props.user !== message.data().user} author={message.data().author} content={message.data().content} /> )
-        : null
+        props.messages.map(message => <Message
+                            key={message.id}
+                            receiving={props.user !== message.data().user}
+                            author={message.data().author}
+                            content={message.data().content}
+                            easy={message.data().date}
+        /> )
+        : null;
     return (
         <div className='messages'>
             {messages}

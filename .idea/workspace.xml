@@ -2,23 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="fce0df85-7fc6-41d2-9e65-58e44a60284e" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/src/Message.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/Message.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MessageBox.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MessageBox.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MessageList.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/MessageList.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SendText.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/SendText.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/spa_authentication.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/realtime_chat.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Auth.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Auth.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Auth.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Auth.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Quotes.css" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/Quotes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Message.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/Message.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Message.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/Message.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/MessageList.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/MessageList.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +69,7 @@
       <workItem from="1602495829981" duration="17272000" />
       <workItem from="1603010076826" duration="11541000" />
       <workItem from="1603115455313" duration="22182000" />
-      <workItem from="1603358490486" duration="1530000" />
+      <workItem from="1603358490486" duration="7115000" />
     </task>
     <task id="LOCAL−00001" summary="First commit">
       <created>1603097862684</created>
@@ -96,7 +83,13 @@
       <option name="presentableId" value="LOCAL−00002" />
       <updated>1603098023436</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL−00003" summary="First commit">
+      <created>1603361569478</created>
+      <option name="number" value="LOCAL−00003" />
+      <option name="presentableId" value="LOCAL−00003" />
+      <updated>1603361569478</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -115,10 +108,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state x="499" y="159" key="#com.intellij.refactoring.safeDelete.UnsafeUsagesDialog/0.0.1536.824@0.0.1536.824" timestamp="1603284634716" />
-    <state x="393" y="7" key="CommitChangelistDialog2" timestamp="1603098022798">
+    <state x="393" y="7" key="CommitChangelistDialog2" timestamp="1603361568694">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="393" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1603098022798" />
+    <state x="393" y="7" key="CommitChangelistDialog2/0.0.1536.824@0.0.1536.824" timestamp="1603361568694" />
     <state width="1515" height="210" key="GridCell.Tab.0.bottom" timestamp="1603185054655">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -135,10 +128,10 @@
       <screen x="0" y="0" width="1536" height="824" />
     </state>
     <state width="1515" height="210" key="GridCell.Tab.0.right/0.0.1536.824@0.0.1536.824" timestamp="1603185054655" />
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1603361533317">
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2" timestamp="1603361575627">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
-    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603361533317" />
+    <state x="361" y="145" key="Vcs.Push.Dialog.v2/0.0.1536.824@0.0.1536.824" timestamp="1603361575627" />
     <state x="533" y="204" key="git4idea.merge.GitPullDialog" timestamp="1603097953242">
       <screen x="0" y="0" width="1536" height="824" />
     </state>
@@ -163,6 +156,12 @@
           <url>file://$PROJECT_DIR$/src/App.js</url>
           <line>75</line>
           <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="javascript">
+          <url>file://$PROJECT_DIR$/src/App.js</url>
+          <line>26</line>
+          <properties lambdaOrdinal="-1" />
+          <option name="timeStamp" value="2" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
